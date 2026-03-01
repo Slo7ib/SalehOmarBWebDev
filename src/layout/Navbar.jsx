@@ -1,15 +1,18 @@
 import { Button } from "@/components/Button";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "#about", key: "about" },
+  { href: "#projects", key: "projects" },
+  { href: "#experience", key: "experience" },
+  { href: "#testimonials", key: "testimonials" },
 ];
 
 export const Navbar = () => {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -46,15 +49,16 @@ export const Navbar = () => {
                 key={index}
                 className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
               >
-                {link.label}
+                {t(`navbar.${link.key}`)}
               </a>
             ))}
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+        {/* Language Switcher & CTA Button */}
+        <div className="hidden md:flex items-center gap-3">
+          <LanguageSwitcher />
+          <Button size="sm">{t("navbar.contactMe")}</Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -77,13 +81,16 @@ export const Navbar = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-lg text-muted-foreground hover:text-foreground py-2"
               >
-                {link.label}
+                {t(`navbar.${link.key}`)}
               </a>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Contact Me
-            </Button>
+            <div className="flex items-center gap-3">
+              <LanguageSwitcher />
+              <Button onClick={() => setIsMobileMenuOpen(false)} className="flex-1">
+                {t("navbar.contactMe")}
+              </Button>
+            </div>
           </div>
         </div>
       )}

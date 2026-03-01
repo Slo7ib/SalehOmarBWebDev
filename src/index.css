@@ -28,6 +28,14 @@
     scroll-behavior: smooth;
   }
 
+  html[dir="rtl"] {
+    direction: rtl;
+  }
+
+  html[dir="ltr"] {
+    direction: ltr;
+  }
+
   button {
     cursor: pointer;
   }
@@ -36,6 +44,10 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: "Inter", sans-serif;
+  }
+
+  html[dir="rtl"] body {
+    font-family: "Cairo", "Tajawal", "Inter", sans-serif;
   }
 
   .font-serif {
@@ -115,6 +127,19 @@
     100% {
       transform: translateX(-50%);
     }
+  }
+
+  @keyframes marquee-rtl {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+
+  html[dir="rtl"] .animate-marquee {
+    animation: marquee-rtl 30s linear infinite;
   }
 
   .animate-fade-in {

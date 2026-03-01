@@ -1,0 +1,162 @@
+{
+  "navbar": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "testimonials": "Testimonials",
+    "contactMe": "Contact Me"
+  },
+  "hero": {
+    "badge": "Software Engineer • React Specialist",
+    "headline1": "Crafting",
+    "headline2": "digital",
+    "headline3": "experiences with",
+    "headline4": "precision.",
+    "description": "Hi, I'm Pedro Machado — a software engineer specializing in React, Next.js, and TypeScript. I build scalable, performant web applications that users love.",
+    "contactMe": "Contact Me",
+    "downloadCV": "Download CV",
+    "followMe": "Follow me:",
+    "availableForWork": "Available for work",
+    "yearsExp": "Years Exp.",
+    "technologies": "Technologies I work with",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "title": "About Me",
+    "headline1": "Building the future,",
+    "headline2": "one component at a time.",
+    "paragraph1": "I'm a passionate software engineer with over 5 years of experience crafting digital products that make a difference. My journey started with a curiosity for how things work on the web, and it has evolved into a deep expertise in modern frontend technologies.",
+    "paragraph2": "I specialize in React, Next.js, and TypeScript, building everything from sleek landing pages to complex enterprise applications. My approach combines technical excellence with a keen eye for design and user experience.",
+    "paragraph3": "When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.",
+    "mission": "My mission is to create digital experiences that are not just functional, but truly delightful — products that users love to use and developers love to maintain.",
+    "highlights": {
+      "cleanCode": {
+        "title": "Clean Code",
+        "description": "Writing maintainable, scalable code that stands the test of time."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Optimizing for speed and delivering lightning-fast user experiences."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Working closely with teams to bring ideas to life."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Staying ahead with the latest technologies and best practices."
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured Work",
+    "headline1": "Projects that",
+    "headline2": "make an impact.",
+    "description": "A selection of my recent work, from complex web applications to innovative tools that solve real-world problems.",
+    "viewAll": "View All Projects",
+    "items": {
+      "fintech": {
+        "title": "Fintech Dashboard",
+        "description": "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights."
+      },
+      "ecommerce": {
+        "title": "E-Commerce Platform",
+        "description": "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard."
+      },
+      "aiWriting": {
+        "title": "AI Writing Assistant",
+        "description": "An intelligent writing tool powered by GPT-4, helping users create better content faster."
+      },
+      "projectManagement": {
+        "title": "Project Management Tool",
+        "description": "A collaborative workspace for teams with real-time updates, task tracking, and integrations."
+      }
+    }
+  },
+  "experience": {
+    "title": "Career Journey",
+    "headline1": "Experience that",
+    "headline2": "speaks volumes.",
+    "description": "A timeline of my professional growth, from curious beginner to senior engineer leading teams and building products at scale.",
+    "items": {
+      "senior": {
+        "role": "Senior Frontend Engineer",
+        "company": "Tech Innovators Inc.",
+        "description": "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers."
+      },
+      "frontend": {
+        "role": "Frontend Engineer",
+        "company": "Digital Solutions Co.",
+        "description": "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%."
+      },
+      "junior": {
+        "role": "Junior Developer",
+        "company": "StartUp Labs",
+        "description": "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components."
+      },
+      "freelance": {
+        "role": "Freelance Developer",
+        "company": "Self-Employed",
+        "description": "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What People Say",
+    "headline1": "Kind words from",
+    "headline2": "amazing people.",
+    "items": {
+      "sarah": {
+        "quote": "Pedro is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
+        "author": "Sarah Chen",
+        "role": "CTO, Tech Innovators Inc."
+      },
+      "michael": {
+        "quote": "Working with Pedro was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
+        "author": "Michael Rodriguez",
+        "role": "Product Manager, Digital Solutions"
+      },
+      "emily": {
+        "quote": "Pedro's expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
+        "author": "Emily Watson",
+        "role": "Engineering Lead, StartUp Labs"
+      },
+      "david": {
+        "quote": "Not only is Pedro technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
+        "author": "David Kim",
+        "role": "CEO, Innovation Hub"
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "headline1": "Let's build",
+    "headline2": "something great.",
+    "description": "Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can work together.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name...",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Your message...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! I'll get back to you soon.",
+      "error": "Failed to send message. Please try again later."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    },
+    "availability": {
+      "title": "Currently Available",
+      "description": "I'm currently open to new opportunities and exciting projects. Whether you need a full-time engineer or a freelance consultant, let's talk!"
+    }
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  }
+}

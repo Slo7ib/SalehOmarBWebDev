@@ -1,45 +1,24 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
-const projects = [
-  {
-    title: "Fintech Dashboard",
-    description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "AI Writing Assistant",
-    description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Project Management Tool",
-    description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
-  },
-];
+import { useTranslation } from "react-i18next";
+
+const projectKeys = ["fintech", "ecommerce", "aiWriting", "projectManagement"];
 
 export const Projects = () => {
+  const { t } = useTranslation();
+  
+  const projects = projectKeys.map((key) => ({
+    title: t(`projects.items.${key}.title`),
+    description: t(`projects.items.${key}.description`),
+    image: `/projects/project${projectKeys.indexOf(key) + 1}.png`,
+    tags: key === "fintech" ? ["React", "Typescript", "NodeJS"] :
+          key === "ecommerce" ? ["Next.js", "Stripe", "PostgreSQL", "Tailwind"] :
+          key === "aiWriting" ? ["React", "OpenAI", "Python", "FastAPI"] :
+          ["Next.js", "Socket.io", "MongoDB", "Redis"],
+    link: "#",
+    github: "#",
+  }));
+
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
       {/* Bg glows */}
@@ -49,18 +28,17 @@ export const Projects = () => {
         {/* Section Header */}
         <div className="text-center mx-auto max-w-3xl mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Featured Work
+            {t("projects.title")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Projects that
+            {t("projects.headline1")}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              make an impact.
+              {t("projects.headline2")}
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            {t("projects.description")}
           </p>
         </div>
 
@@ -135,7 +113,7 @@ export const Projects = () => {
         {/* View All CTA */}
         <div className="text-center mt-12 animate-fade-in animation-delay-500">
           <AnimatedBorderButton>
-            View All Projects
+            {t("projects.viewAll")}
             <ArrowUpRight className="w-5 h-5" />
           </AnimatedBorderButton>
         </div>

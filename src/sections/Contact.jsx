@@ -9,29 +9,23 @@ import {
 import { Button } from "@/components/Button";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
-const contactInfo = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "pedro@example.com",
-    href: "mailto:pedro@example.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "San Francisco, CA",
-    href: "#",
-  },
+const contactInfoKeys = ["email", "phone", "location"];
+const contactIcons = [Mail, Phone, MapPin];
+const contactValues = [
+  "pedro@example.com",
+  "+1 (555) 123-4567",
+  "San Francisco, CA",
+];
+const contactHrefs = [
+  "mailto:pedro@example.com",
+  "tel:+15551234567",
+  "#",
 ];
 
 export const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,6 +36,13 @@ export const Contact = () => {
     type: null, // 'success' or 'error'
     message: "",
   });
+  
+  const contactInfo = contactInfoKeys.map((key, idx) => ({
+    icon: contactIcons[idx],
+    label: t(`contact.info.${key}`),
+    value: contactValues[idx],
+    href: contactHrefs[idx],
+  }));
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -72,15 +73,14 @@ export const Contact = () => {
 
       setSubmitStatus({
         type: "success",
-        message: "Message sent successfully! I'll get back to you soon.",
+        message: t("contact.form.success"),
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
-      console.error("EmailJS error:", error);
+      console.error("EmailJS error:", err);
       setSubmitStatus({
         type: "error",
-        message:
-          error.text || "Failed to send message. Please try again later.",
+        message: err.text || t("contact.form.error"),
       });
     } finally {
       setIsLoading(false);
@@ -97,17 +97,16 @@ export const Contact = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Get In Touch
+            {t("contact.title")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Let's build{" "}
+            {t("contact.headline1")}{" "}
             <span className="font-serif italic font-normal text-white">
-              something great.
+              {t("contact.headline2")}
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            Have a project in mind? I'd love to hear about it. Send me a message
-            and let's discuss how we can work together.
+            {t("contact.description")}
           </p>
         </div>
 
@@ -119,13 +118,13 @@ export const Contact = () => {
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
                 >
-                  Name
+                  {t("contact.form.name")}
                 </label>
                 <input
                   id="name"
                   type="text"
                   required
-                  placeholder="Your name..."
+                  placeholder={t("contact.form.namePlaceholder")}
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -140,11 +139,12 @@ export const Contact = () => {
                   type="email"
                   className="block text-sm font-medium mb-2"
                 >
-                  Email
+                  {t("contact.form.email")}
                 </label>
                 <input
+                  id="email"
                   required
-                  placeholder="your@email.com"
+                  placeholder={t("contact.form.emailPlaceholder")}
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -158,16 +158,17 @@ export const Contact = () => {
                   htmlFor="message"
                   className="block text-sm font-medium mb-2"
                 >
-                  Message
+                  {t("contact.form.message")}
                 </label>
                 <textarea
+                  id="message"
                   rows={5}
                   required
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  placeholder="Your message..."
+                  placeholder={t("contact.form.messagePlaceholder")}
                   className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
                 />
               </div>
@@ -179,10 +180,10 @@ export const Contact = () => {
                 disabled={isLoading}
               >
                 {isLoading ? (
-                  <>Sending...</>
+                  <>{t("contact.form.sending")}</>
                 ) : (
                   <>
-                    Send Message
+                    {t("contact.form.send")}
                     <Send className="w-5 h-5" />
                   </>
                 )}
@@ -212,7 +213,7 @@ export const Contact = () => {
           <div className="space-y-6 animate-fade-in animation-delay-400">
             <div className="glass rounded-3xl p-8">
               <h3 className="text-xl font-semibold mb-6">
-                Contact Information
+                {t("contact.info.title")}
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((item, i) => (
@@ -239,12 +240,10 @@ export const Contact = () => {
             <div className="glass rounded-3xl p-8 border border-primary/30">
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                <span className="font-medium">Currently Available</span>
+                <span className="font-medium">{t("contact.availability.title")}</span>
               </div>
               <p className="text-muted-foreground text-sm">
-                I'm currently open to new opportunities and exciting projects.
-                Whether you need a full-time engineer or a freelance consultant,
-                let's talk!
+                {t("contact.availability.description")}
               </p>
             </div>
           </div>

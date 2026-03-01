@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const socialLinks = [
   { icon: Github, href: "#", label: "GitHub" },
@@ -6,15 +7,16 @@ const socialLinks = [
   { icon: Twitter, href: "#", label: "Twitter" },
 ];
 
-const footerLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
-];
+const footerLinkKeys = ["about", "projects", "experience", "contact"];
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
+  
+  const footerLinks = footerLinkKeys.map((key) => ({
+    href: `#${key}`,
+    label: t(`navbar.${key}`),
+  }));
 
   return (
     <footer className="py-12 border-t border-border">
@@ -26,7 +28,7 @@ export const Footer = () => {
               PM<span className="text-primary">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} Pedro Machado. All rights reserved.
+              © {currentYear} Pedro Machado. {t("footer.copyright")}
             </p>
           </div>
 

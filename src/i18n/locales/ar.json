@@ -6,15 +6,16 @@
     "testimonials": "الشهادات",
     "contactMe": "اتصل بي"
   },
+
   "hero": {
-    "badge": "مهندس برمجيات • متخصص في React",
+    "badge": "مطور مواقع • متخصص في React",
     "headline1": "صياغة",
     "headline2": "تجارب رقمية",
-    "headline3": "مع",
+    "headline3": "ب",
     "headline4": "دقة.",
-    "description": "مرحباً، أنا بيدرو ماتشادو — مهندس برمجيات متخصص في React و Next.js و TypeScript. أبني تطبيقات ويب قابلة للتوسع وعالية الأداء يحبها المستخدمون.",
+    "description": "مرحبا انا صالح بلحمر , مهندس برمجيات ومطور مواقع متخصص في React و Typescript و Tailwind اقوم بعمل مواقع لمكاتب المحاماة والمطاعم والشركات الصغرى",
     "contactMe": "اتصل بي",
-    "downloadCV": "تحميل السيرة الذاتية",
+    "downloadCV": "لتحميل السيرة الذاتية",
     "followMe": "تابعني:",
     "availableForWork": "متاح للعمل",
     "yearsExp": "سنوات خبرة",

@@ -31,13 +31,14 @@ export const LanguageSwitcher = () => {
     document.documentElement.lang = langCode;
   };
 
-  const currentLanguage = languages.find((lang) => lang.code === i18n.language) || languages[0];
+  const currentLanguage =
+    languages.find((lang) => lang.code === i18n.language) || languages[0];
 
   return (
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-full glass hover:bg-surface transition-all"
+        className="flex items-center gap-2 px-3 py-2 rounded-full glass hover:bg-surface transition-all "
         aria-label="Change language"
       >
         <Globe className="w-4 h-4" />
@@ -46,9 +47,11 @@ export const LanguageSwitcher = () => {
       </button>
 
       {isOpen && (
-        <div className={`absolute top-full mt-2 glass rounded-xl overflow-hidden shadow-lg z-50 min-w-[150px] animate-fade-in ${
-          i18n.language === "ar" ? "left-0" : "right-0"
-        }`}>
+        <div
+          className={`absolute top-full mt-2 glass rounded-xl overflow-hidden shadow-lg z-50 min-w-[150px] ${
+            i18n.language === "ar" ? "left-0" : "right-0"
+          }`}
+        >
           {languages.map((lang) => (
             <button
               key={lang.code}

@@ -16,13 +16,16 @@ i18n
         translation: arTranslations,
       },
     },
-    fallbackLng: 'en',
+    // Default to Arabic on first load; user preference (stored in localStorage)
+    // will override this once they change the language.
+    fallbackLng: 'ar',
     debug: false,
     interpolation: {
       escapeValue: false,
     },
     detection: {
-      order: ['localStorage', 'navigator'],
+      // Only use saved preference; if none, fall back to Arabic
+      order: ['localStorage'],
       caches: ['localStorage'],
     },
   });

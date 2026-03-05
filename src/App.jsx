@@ -5,6 +5,8 @@ import { Projects } from "@/sections/Projects";
 import { Experience } from "@/sections/Experience";
 import { Testimonials } from "@/sections/Testimonials";
 import { Contact } from "@/sections/Contact";
+import { DemoTabs } from "@/sections/DemoTabs";
+import { PricingPackage } from "@/sections/PricingPackage";
 import { Footer } from "./layout/Footer";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
@@ -23,9 +25,12 @@ function App() {
     <div className="min-h-screen overflow-x-hidden">
       <Navbar />
       <main>
-        <Hero />
+        <Hero /><DemoTabs />
+        <PricingPackage />
         <About />
+        
         <Projects />
+        
         <Experience />
         <Testimonials />
         <Contact />

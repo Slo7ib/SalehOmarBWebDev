@@ -24,20 +24,20 @@ export const PricingPackage = () => {
   const isArabic = (i18n.resolvedLanguage || i18n.language) === "ar";
 
   const heading = isArabic
-    ? "حزمة الموقع للمحامي الفردي"
-    : "Solo Attorney Starter Package";
+    ? "حزمة موقع واجهة احترافي"
+    : "Professinal Landing Page Package";
 
   const currency = isArabic ? "ريال" : "SAR";
 
-  const title = isArabic ? "موقع مكتب محاماة احترافي" : "Professional Law Firm Website";
+  const title = isArabic ? "موقع واجهة احترافي" : "Professional Landing Page Website";
 
   const subtitle = isArabic
-    ? "موقع ووردبريس كامل للمحامين الأفراد والمكاتب الصغيرة"
-    : "Complete WordPress website for solo attorneys and small practices";
+    ? "موقع ووردبريس كامل للمطاعم او المنشآت الصغيرة"
+    : "Complete WordPress website for buisinesses";
 
   const delivery = isArabic
-    ? "التسليم: 5-7 أيام عمل من استلام المحتوى"
-    : "Delivery: 5-7 business days from content receipt";
+    ? "-"
+    : "-";
 
   const cta = isArabic ? "ابدأ الآن" : "Get Started Now";
 

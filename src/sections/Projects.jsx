@@ -2,19 +2,19 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { useTranslation } from "react-i18next";
 
-const projectKeys = ["fintech", "ecommerce", "aiWriting", "projectManagement"];
+const projectKeys = ["tenzies", "ecommerce", "aiWriting"];
 
 export const Projects = () => {
   const { t } = useTranslation();
-  
+
   const projects = projectKeys.map((key) => ({
     title: t(`projects.items.${key}.title`),
     description: t(`projects.items.${key}.description`),
     image: `/projects/project${projectKeys.indexOf(key) + 1}.png`,
-    tags: key === "fintech" ? ["React", "Typescript", "NodeJS"] :
-          key === "ecommerce" ? ["Next.js", "Stripe", "PostgreSQL", "Tailwind"] :
-          key === "aiWriting" ? ["React", "OpenAI", "Python", "FastAPI"] :
-          ["Next.js", "Socket.io", "MongoDB", "Redis"],
+    tags: key === "tenzies" ? ["React", "Typescript", "Tailwind", "Github", "Vite"] :
+      key === "ecommerce" ? ["Typescript", "React", "Lemon Squeezy", "Tailwind", "Chrome Extension"] :
+        key === "aiWriting" ? ["Gemini", "OpenAI", "HTML", "CSS"] :
+          ["React", "Typescript", "NodeJS"],
     link: "#",
     github: "#",
   }));
@@ -111,12 +111,7 @@ export const Projects = () => {
         </div>
 
         {/* View All CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <AnimatedBorderButton>
-            {t("projects.viewAll")}
-            <ArrowUpRight className="w-5 h-5" />
-          </AnimatedBorderButton>
-        </div>
+
       </div>
     </section>
   );

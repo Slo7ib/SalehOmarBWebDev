@@ -53,23 +53,18 @@
     "headline1": "Projects that",
     "headline2": "make an impact.",
     "description": "A selection of my recent work, from complex web applications to innovative tools that solve real-world problems.",
-    "viewAll": "View All Projects",
     "items": {
-      "fintech": {
-        "title": "Fintech Dashboard",
-        "description": "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights."
+      "tenzies": {
+        "title": "Tenzies Game",
+        "description": "A simple React game i made for learning purposes."
       },
       "ecommerce": {
-        "title": "E-Commerce Platform",
-        "description": "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard."
+        "title": "Privacy Lens - Chrome Extension",
+        "description": "Stop blindly clicking “I Agree.” Privacy Lens uses advanced AI to instantly analyze how websites collect, use, and share your personal data, turning dense legal text into clear, actionable insights you can actually understand."
       },
       "aiWriting": {
-        "title": "AI Writing Assistant",
-        "description": "An intelligent writing tool powered by GPT-4, helping users create better content faster."
-      },
-      "projectManagement": {
-        "title": "Project Management Tool",
-        "description": "A collaborative workspace for teams with real-time updates, task tracking, and integrations."
+        "title": "Webstack dailay - News network",
+        "description": "I am the founder of a famout and recognized news network in Saudi Arabia and the US & EU, we use multiple langauges to reach more readers, we are speacialized in all the latest Web news with over [] followers across all platforms."
       }
     }
   },
@@ -77,27 +72,27 @@
     "title": "Career Journey",
     "headline1": "Experience that",
     "headline2": "speaks volumes.",
-    "description": "A timeline of my professional growth, from curious beginner to senior engineer leading teams and building products at scale.",
+    "description": "A timeline of my professional growth, from curious beginner to intermediate web developer building products at scale.",
     "items": {
-      "senior": {
-        "role": "Senior Frontend Engineer",
-        "company": "Tech Innovators Inc.",
-        "description": "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers."
+      "student": {
+        "role": "Computer Science graduate",
+        "company": "Arab Open University",
+        "description": "studied computer science in saudi arabia and won the Scientific Excellence Award in Research Sector."
       },
-      "frontend": {
-        "role": "Frontend Engineer",
-        "company": "Digital Solutions Co.",
-        "description": "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%."
+      "Web Designer": {
+        "role": "Web Designer - React & Tailwind",
+        "company": "Freelance",
+        "description": "Built and maintained multiple tailwind components for different clients."
       },
       "junior": {
-        "role": "Junior Developer",
-        "company": "StartUp Labs",
-        "description": "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components."
+        "role": "Tech News Journalist",
+        "company": "Webstack Dailay",
+        "description": "Made my very first blog for tech news and started growing my audience in order to reach more clients and audiance. while also learning about the latest tech in web development"
       },
       "freelance": {
-        "role": "Freelance Developer",
-        "company": "Self-Employed",
-        "description": "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment."
+        "role": "Saas Developer",
+        "company": "Privacy Lens",
+        "description": "Built my very first saas product and launched it to the public in the chrome store. with the aim of raising awarness on privacy and data collection"
       }
     }
   },

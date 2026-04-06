@@ -74,22 +74,22 @@
     "headline2": "speaks volumes.",
     "description": "A timeline of my professional growth, from curious beginner to intermediate web developer building products at scale.",
     "items": {
-      "student": {
+      "exp1": {
         "role": "Computer Science graduate",
         "company": "Arab Open University",
         "description": "studied computer science in saudi arabia and won the Scientific Excellence Award in Research Sector."
       },
-      "Web Designer": {
+      "exp2": {
         "role": "Web Designer - React & Tailwind",
         "company": "Freelance",
         "description": "Built and maintained multiple tailwind components for different clients."
       },
-      "junior": {
+      "exp3": {
         "role": "Tech News Journalist",
         "company": "Webstack Dailay",
         "description": "Made my very first blog for tech news and started growing my audience in order to reach more clients and audiance. while also learning about the latest tech in web development"
       },
-      "freelance": {
+      "exp4": {
         "role": "Saas Developer",
         "company": "Privacy Lens",
         "description": "Built my very first saas product and launched it to the public in the chrome store. with the aim of raising awarness on privacy and data collection"

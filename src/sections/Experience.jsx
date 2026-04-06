@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-const experienceKeys = ["senior", "frontend", "junior", "freelance"];
+const experienceKeys = ["exp1", "exp2", "exp3", "exp4"];
 const periods = ["2022 — Present", "2020 — 2022", "2019 — 2020", "2018 — 2019"];
 
 export const Experience = () => {
@@ -12,9 +12,9 @@ export const Experience = () => {
     role: t(`experience.items.${key}.role`),
     company: t(`experience.items.${key}.company`),
     description: t(`experience.items.${key}.description`),
-    technologies: key === "senior" ? ["React", "TypeScript", "Next.js", "GraphQL"] :
-                  key === "frontend" ? ["React", "Redux", "Jest", "Cypress"] :
-                  key === "junior" ? ["React", "Node.js", "MongoDB", "AWS"] :
+    technologies: idx === 0 ? ["React", "TypeScript", "Next.js", "GraphQL"] :
+                  idx === 1 ? ["React", "Redux", "Jest", "Cypress"] :
+                  idx === 2 ? ["React", "Node.js", "MongoDB", "AWS"] :
                   ["JavaScript", "PHP", "WordPress", "MySQL"],
     current: idx === 0,
   }));

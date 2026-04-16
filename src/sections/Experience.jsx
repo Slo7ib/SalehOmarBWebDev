@@ -1,21 +1,21 @@
 import { useTranslation } from "react-i18next";
 
 const experienceKeys = ["exp1", "exp2", "exp3", "exp4"];
-const periods = ["2022 — Present", "2020 — 2022", "2019 — 2020", "2018 — 2019"];
+const periods = [, "2018 — 2019", "2019 — 2020", , "2020 — 2022", "2022 — Present"];
 
 export const Experience = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
-  
+
   const experiences = experienceKeys.map((key, idx) => ({
     period: periods[idx],
     role: t(`experience.items.${key}.role`),
     company: t(`experience.items.${key}.company`),
     description: t(`experience.items.${key}.description`),
     technologies: idx === 0 ? ["React", "TypeScript", "Next.js", "GraphQL"] :
-                  idx === 1 ? ["React", "Redux", "Jest", "Cypress"] :
-                  idx === 2 ? ["React", "Node.js", "MongoDB", "AWS"] :
-                  ["JavaScript", "PHP", "WordPress", "MySQL"],
+      idx === 1 ? ["React", "Redux", "Jest", "Cypress"] :
+        idx === 2 ? ["React", "Node.js", "MongoDB", "AWS"] :
+          ["JavaScript", "PHP", "WordPress", "MySQL"],
     current: idx === 0,
   }));
 
@@ -76,15 +76,14 @@ export const Experience = () => {
 
                 {/* Content */}
                 <div
-                  className={`pl-8 md:pl-0 ${
-                    idx % 2 === 0
-                      ? isRTL 
+                  className={`pl-8 md:pl-0 ${idx % 2 === 0
+                      ? isRTL
                         ? "md:pl-16 md:text-left"
                         : "md:pr-16 md:text-right"
                       : isRTL
                         ? "md:col-start-1 md:pr-16 md:text-right"
                         : "md:col-start-2 md:pl-16"
-                  }`}
+                    }`}
                 >
                   <div
                     className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}
@@ -98,11 +97,10 @@ export const Experience = () => {
                       {exp.description}
                     </p>
                     <div
-                      className={`flex flex-wrap gap-2 mt-4 ${
-                        idx % 2 === 0 
+                      className={`flex flex-wrap gap-2 mt-4 ${idx % 2 === 0
                           ? isRTL ? "md:justify-start" : "md:justify-end"
                           : isRTL ? "md:justify-end" : ""
-                      }`}
+                        }`}
                     >
                       {exp.technologies.map((tech, techIdx) => (
                         <span
